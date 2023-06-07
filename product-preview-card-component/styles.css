@@ -1,0 +1,129 @@
+ /* time worked on 5:30min hrs */
+ @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+ :root {
+    --primary-dark-cyan: hsl(158, 36%, 37%);
+    --primary-cream: hsl(30, 38%, 92%);
+    --neutral-dark-blue:  hsl(212, 21%, 14%);
+    --neutral-dark-gray-blue:  hsl(228, 12%, 48%);
+    --neutral-white:  hsl(0, 0%, 100%);
+    --montserrat-regular: 500;
+    --montserrat-bold: 700;
+    --fraunces-bold: 700;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--primary-cream);
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: var(--montserrat-regular);
+    color: var(--neutral-dark-gray-blue);
+  }
+
+  p{
+    font-size: 14px;
+  }
+  h1{
+    color: var(--neutral-dark-blue);
+    font-family: 'Fraunces', serif;
+    font-weight: var(--fraunces-bold);
+  }
+
+  img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .card{
+    display: flex;
+    flex-direction: column;
+    width: min(90%, 35rem);
+    border-radius: 6px;
+    background-color: var(--neutral-white);
+    margin-bottom: .8rem;
+  }
+  .desktop-img{
+    display: none;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+  .mobile-img{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+
+  .card-body{
+    padding: 1.5rem;
+  }
+
+  .card-title{
+    letter-spacing: .3rem;
+  }
+
+  .product-name{
+    margin-top: .3rem;
+  }
+
+  .product-desc{
+    margin-top: .8rem;
+  }
+
+  .product-price{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .product-price h1{
+    color: var(--primary-dark-cyan);
+  }
+
+  .product-price p{
+    text-decoration: line-through;
+  }
+
+  button{
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-dark-cyan);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: var(--montserrat-regular);
+    color: var(--neutral-white);
+    text-align: center;
+  }
+
+  button i{
+    margin-right: .5rem;
+  }
+
+  @media (min-width: 376px) {
+    .card{
+      flex-direction: row;
+    }
+    .card >*{
+      flex-basis: 100%;
+    }
+    .mobile-img{
+      display: none;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+    }
+    .desktop-img{
+      display: block;
+    }
+  }
+  @media (min-width: 1440px) {}
